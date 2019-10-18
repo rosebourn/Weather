@@ -21,20 +21,31 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
-            <h3>Search for a City:</h3>
-            <div class="input-group">
-                 <input type="text" class="form-control" aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-                    </div>
+        
+    <div class="row">
+        <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Search a city</label>
+                  <input type="text" class="form-control" id="city" >
+                </div>
+                
+                
+                <button id="search" class="btn btn-primary">Search</button>
+              </form>
             </div>
-        </div>
-    </div>
+            <div class="row" id="city-render"></div>
 </div>
 
-<div class="row">
+
     <div class="col-sm-8">
-        <div class="container" id="current-conditions">
+        
+        <div id="current-conditions" class="row">
+            <div class="city"></div>
+            <div class="temp"></div>
+            <div class="wind"></div>
+            <div class="uv-index"></div>
+        </div>
+            <div id="five-day" class="row"></div>
 
         </div>
     </div>
