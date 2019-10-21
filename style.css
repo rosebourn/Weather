@@ -10,10 +10,23 @@ h1 {
     height: 20px;
 }
 
-.row {
+.row-2 {
     display: block;
 }
 
-#current-conditions {
-    float: right;
+.container-1 {
+    float: left;
+    width: 30%;
 }
+
+#current-conditions {
+    float: left;
+    width: 60%;
+}
+
+#five-day {
+    font-size: 16px;
+    float: left;
+    width:60%;
+}
+

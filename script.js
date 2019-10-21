@@ -4,6 +4,8 @@ $("#search").on("click", function(event) {
     var search = $("#city").val();
     console.log(search);
     weather(search);
+    pastSearches.push(search);
+    renderButtons();
   
 })
 
@@ -111,19 +113,21 @@ function weather(search) {
         cardFiveHumid.text("Humidity:" + response.list[26].main.humidity + "%");
     })
 
-    var pastSearches = "";
-
+    var pastSearches = document.querySelector("input[type='text']");
+                
     function renderButtons() {
         $("#past-searches").empty();
         for (var i = 0; i < pastSearches.length; i++);
-        var a = $("<button>");
-        a.addClass("cities");
-        a.attr("data-name", pastSearches[i]);
-        a.text(pastSearches[i]);
-        $("#past-searches").prepend(a);
+        var cityButton = $("<button>");
+        cityButton.addClass("cities");
+        cityButton.attr("data-name", pastSearches[i]);
+        cityButton.text(pastSearches[i]);
+        $("#past-searches").prepend(cityButton);
     }
     renderButtons();
+  
 
 }
+
 
 
