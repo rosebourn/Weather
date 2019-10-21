@@ -19,52 +19,69 @@
 </div>
 
 <div class="container">
+    <div class="col-sm-4">
     <div class="row">
-        <div class="col-sm-4">
-            <div class="row">
-                <h2>Search for a City:</h2>
-                <form>
-                    <div class="input-group mb-3">
-                        <input type="text" id="city" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="search">Search</button>
-                      
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-  
-        
-        <div id="current-conditions" class=" col-sm-8 row">
-
-            <div class="city"></div>
-            <p class="temp"></p>
-            <p class="humid"></p>
-            <p class="wind"></p>
-            <div class="uv-index"></div>
-        </div>
-        
-        <div id="five-day" class="row">
-                <div id="card-1">
-                        <div class="card-body">
-                            <div class="date">
-                            <div class="icon-1">
-                            <div class="temp-1">
-                            <div class="humidity-1">
-
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
+        <h2>Search for a City:</h2>
+            <form>
+                <div class="input-group mb-3">
+                    <input type="text" id="city" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="search">Search</button>
                     </div>
                 </div>
-        </div>
+            </form>
     </div>
 </div>
+</div>
+
+<div id="current-conditions" class="col-sm-8 row">
+    <div class="city"></div>
+    <div class="temp"></div>
+    <div class="humid"></div>
+    <div class="wind"></div>
+    <div class="uv-index"></div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="max-width: 10rem;">
+    <div class="card-header date-1"></div>
+        <div class="card-body icon-1">
+          <p class="card-title temp-1"></p>
+          <p class="card-text humidity-1"></p>
+        </div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="max-width: 10rem;">
+    <div class="card-header date-2"></div>
+        <div class="card-body icon-2">
+            <p class="card-title temp-2"></p>
+            <p class="card-text humidity-2"></p>
+        </div>
+</div>
+        
+<div class="card text-white bg-primary mb-3" style="max-width: 10rem;">
+    <div class="card-header date-3"></div>
+        <div class="card-body icon-3">
+            <p class="card-title temp-3"></p>
+            <p class="card-text humidity-3"></p>
+        </div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="max-width: 10rem;">
+    <div class="card-header date-4"></div>
+        <div class="card-body icon-4">
+            <p class="card-title temp-4"></p>
+            <p class="card-text humidity-4"></p>
+        </div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="max-width: 10rem;">
+    <div class="card-header date-5"></div>
+        <div class="card-body icon-5">
+            <p class="card-title temp-5"></p>
+            <p class="card-text humidity-5"></p>
+        </div>
+</div>
+       
 
 <div id="past-searches"></div>
       

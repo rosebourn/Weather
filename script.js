@@ -23,7 +23,7 @@ function weather(search) {
       var wind = $(".wind");
       
 
-      city.html("<h2>" + response.name + "</h2>");
+      city.html("<h3>" + response.name + moment().format('L') + "</h3>");
       temp.text("Tempurature:" + response.main.temp + "°F");
       humid.text("Humidity:" + response.main.humidity + "%");
       wind.text("Wind Speed:" + response.wind.speed + "MPH");
@@ -45,14 +45,72 @@ function weather(search) {
         method: "GET"
     }).then(function(response) {
         console.log(response);
-        var cardOneDate = $(".date");
+        var cardOneDate = $(".date-1");
+        var cardOneIcon = $(".icon-1");
         var cardOneTemp = $(".temp-1");
         var cardOneHumid = $(".humidity-1");
-
-        cardOneDate.text(moment().format('L'));
+       
+        cardOneDate.text(moment().add(1, 'days').format('L'));
         cardOneTemp.text("Temp:" + response.list[0].main.temp + "°F");
         cardOneHumid.text("Humidity:" + response.list[0].main.humidity + "%");
     })
+
+    $.ajax({
+        url: forcastURL,
+        method: "GET"
+    }).then(function(response) {
+        var cardTwoDate = $(".date-2");
+        var cardTwoIcon = $(".icon-2");
+        var cardTwoTemp = $(".temp-2");
+        var cardTwoHumid = $(".humidity-2");
+
+        cardTwoDate.text(moment().add(2, 'days').format('L'));
+        cardTwoTemp.text("Temp:" + response.list[2].main.temp + "°F");
+        cardTwoHumid.text("Humidity:" + response.list[2].main.humidity + "%");
+    })
+
+    $.ajax({
+        url: forcastURL,
+        method: "GET"
+    }).then(function(response) {
+        var cardThreeDate = $(".date-3");
+        var cardThreeIcon = $(".icon-3");
+        var cardThreeTemp = $(".temp-3");
+        var cardThreeHumid = $(".humidity-3");
+
+        cardThreeDate.text(moment().add(3, 'days').format('L'));
+        cardThreeTemp.text("Temp:" + response.list[10].main.temp + "°F");
+        cardThreeHumid.text("Humidity:" + response.list[10].main.humidity + "%");
+    })
+
+    $.ajax({
+        url: forcastURL,
+        method: "GET"
+    }).then(function(response) {
+        var cardFourDate = $(".date-4");
+        var cardFourIcon = $(".icon-4");
+        var cardFourTemp = $(".temp-4");
+        var cardFourHumid = $(".humidity-4");
+
+        cardFourDate.text(moment().add(4, 'days').format('L'));
+        cardFourTemp.text("Temp:" + response.list[18].main.temp + "°F");
+        cardFourHumid.text("Humidity:" + response.list[18].main.humidity + "%");
+    })
+
+    $.ajax({
+        url: forcastURL,
+        method: "GET"
+    }).then(function(response) {
+        var cardFiveDate = $(".date-5");
+        var cardFiveIcon = $(".icon-5");
+        var cardFiveTemp = $(".temp-5");
+        var cardFiveHumid = $(".humidity-5");
+
+        cardFiveDate.text(moment().add(5, 'days').format('L'));
+        cardFiveTemp.text("Temp:" + response.list[26].main.temp + "°F");
+        cardFiveHumid.text("Humidity:" + response.list[26].main.humidity + "%");
+    })
+
     var pastSearches = "";
 
     function renderButtons() {
