@@ -49,9 +49,23 @@ function weather(search) {
         var cardOneTemp = $(".temp-1");
         var cardOneHumid = $(".humidity-1");
 
-        cardOneDate.text(response.list[0].dt_txt);
+        cardOneDate.text(moment().format('L'));
         cardOneTemp.text("Temp:" + response.list[0].main.temp + "°F");
         cardOneHumid.text("Humidity:" + response.list[0].main.humidity + "%");
     })
+    var pastSearches = "";
+
+    function renderButtons() {
+        $("#past-searches").empty();
+        for (var i = 0; i < pastSearches.length; i++);
+        var a = $("<button>");
+        a.addClass("cities");
+        a.attr("data-name", pastSearches[i]);
+        a.text(pastSearches[i]);
+        $("#past-searches").prepend(a);
+    }
+    renderButtons();
 
 }
+
+

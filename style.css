@@ -10,3 +10,10 @@ h1 {
     height: 20px;
 }
 
+.row {
+    display: block;
+}
+
+#current-conditions {
+    float: right;
+}
