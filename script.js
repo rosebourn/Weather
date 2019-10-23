@@ -5,7 +5,7 @@ $("#search").on("click", function(event) {
     console.log(search);
     weather(search);
     pastSearches.push(search);
-    renderButtons();
+    //renderButtons();
   
 })
 
@@ -13,6 +13,7 @@ function weather(search) {
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + search + "&units=imperial" + "&APPID=4785a78b216636ca439247db2c4751b1";
     var forcastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + search + "&units=imperial" + "&APPID=4785a78b216636ca439247db2c4751b1";
     var uvURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=37.75&lon=-122.37" + "&APPID=4785a78b216636ca439247db2c4751b1";
+    //var iconURL = "http://openweathermap.org/img/w/" + iconcode + ".png";
 
     $.ajax({
         url: queryURL,
@@ -113,7 +114,9 @@ function weather(search) {
         cardFiveHumid.text("Humidity:" + response.list[26].main.humidity + "%");
     })
 
-    var pastSearches = document.querySelector("input[type='text']");
+   
+
+    var pastSearches = '';
                 
     function renderButtons() {
         $("#past-searches").empty();
@@ -128,6 +131,13 @@ function weather(search) {
   
 
 }
+
+/*$.ajax({
+    url: iconURL,
+    method: "GET"
+}).then(function(response) {
+   console.log(response);
+})*/
 
 
 
